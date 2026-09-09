@@ -5,8 +5,8 @@
 }
 
 :root {
-    --primary-color: #FF6B9D;
-    --secondary-color: #C44569;
+    --primary-color: #1f2689;
+    --secondary-color: #eda6ba;
     --light-bg: #FFF5F7;
     --text-dark: #333333;
     --text-light: #666666;
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Poppins, Montserrat, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
 }
@@ -87,7 +87,7 @@ body {
 /* Hero section bgr */
 
 .hero-bg {
-    background: linear-gradient(135deg, rgba(255, 107, 157, 0.85) 0%, rgba(196, 69, 105, 0.85) 100%),
+    background: linear-gradient(135deg, rgba(107, 198, 255, 0.85) 10%, rgba(130, 69, 196, 0.85) 90%),
                 url('./images/bidan.jpg') center/cover no-repeat;
     color: var(--white);
     padding: 120px 20px;
@@ -147,8 +147,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-card {
@@ -1133,12 +1145,12 @@ body {
     display: block;
 }
 
-.btn-outline {
+/* .btn-outline {
     display: inline-block;
     padding: 12px 30px;
     border: 2px solid var(--primary-color);
     border-radius: 50px;
-    color: var(--primary-color);
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     background: transparent;
@@ -1149,7 +1161,7 @@ body {
     background: var(--primary-color);
     color: var(--white);
     transform: translateY(-2px);
-}
+} */
 
 /* Responsive */
 @media (max-width: 768px) {
